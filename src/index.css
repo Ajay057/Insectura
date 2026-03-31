@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 95%;
+    --foreground: 0 0% 11%;
+
+    --card: 40 20% 97%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 40 20% 97%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 160 70% 14%;
+    --primary-foreground: 40 20% 95%;
+
+    --secondary: 80 58% 35%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 40 10% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 40 45% 55%;
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 160 70% 14%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 160 70% 14%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 40 45% 55%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 160 50% 20%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 160 50% 20%;
+    --sidebar-ring: 40 45% 55%;
+
+    /* Custom brand tokens */
+    --deep-green: 160 70% 14%;
+    --olive: 80 58% 35%;
+    --gold: 40 45% 55%;
+    --cream: 40 20% 95%;
+    --charcoal: 0 0% 11%;
+    --light-grey: 220 3% 67%;
+
+    --gradient-green: linear-gradient(135deg, hsl(160 70% 14%), hsl(160 50% 22%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 45% 55%), hsl(40 55% 65%));
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .gold-divider {
+    @apply h-px w-16 mx-auto;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-4;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, hsl(var(--deep-green)), hsl(var(--olive)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
