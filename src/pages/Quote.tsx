@@ -126,14 +126,16 @@ const Quote = () => {
       )
       .join("\n");
 
-    const fullMessage = `Customer Type: ${customerType}\nLocation: ${location}\nAddress: ${address}\n\n--- Products ---\n${productDetails}\n\nAdditional Details:\n${message}`;
-
     const data = {
       name,
       company,
       email,
       phone,
-      message: fullMessage,
+      "Customer Type": customerType,
+      "Location": location,
+      "Address": address,
+      "Products": productDetails,
+      "Additional Details": message || "Not specified",
       subject: `New Quote Request from ${name}`
     };
 

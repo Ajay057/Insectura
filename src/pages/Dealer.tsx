@@ -41,14 +41,15 @@ const Dealer = () => {
 
     setStatus("submitting");
 
-    const fullMessage = `Dealer Type: ${dealerType}\nLocation: ${location}\n\nProducts Interested In:\n${selectedProducts.join(", ") || "Not specified"}\n\nWhy I want to become a dealer:\n${reason}`;
-
     const data = {
       name,
       company,
       email,
       phone,
-      message: fullMessage,
+      "Dealer Type": dealerType,
+      "Location": location,
+      "Products Interested In": selectedProducts.join(", ") || "Not specified",
+      "Why I want to become a dealer": reason || "Not specified",
       subject: `New Dealer Application from ${name}`
     };
 
@@ -132,9 +133,8 @@ const Dealer = () => {
               {productInterests.map((product) => (
                 <label
                   key={product}
-                  className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
-                    selectedProducts.includes(product) ? "bg-primary/10 border-primary" : "bg-card border-border hover:bg-muted"
-                  }`}
+                  className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${selectedProducts.includes(product) ? "bg-primary/10 border-primary" : "bg-card border-border hover:bg-muted"
+                    }`}
                 >
                   <input
                     type="checkbox"
