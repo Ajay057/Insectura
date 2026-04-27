@@ -86,9 +86,9 @@ const Footer = () => (
       </div>
 
       {/* Divider */}
-      <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-xs opacity-60">© {new Date().getFullYear()} Insectura Pvt. Ltd. All rights reserved.</p>
-        <p className="text-xs opacity-60">Pure Neem. Proven Performance.</p>
+      <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs opacity-60">
+        <p>© {new Date().getFullYear()} Insectura Pvt. Ltd. All rights reserved. | <Link to="/admin/login" className="hover:text-gold transition-colors">Admin Portal</Link></p>
+        <p>Pure Neem. Proven Performance.</p>
       </div>
     </div>
   </footer>
